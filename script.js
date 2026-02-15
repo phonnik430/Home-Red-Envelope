@@ -21,7 +21,7 @@ function getWeightedReward() {
     if (rand < 5) {         
         // โอกาส 5% (0 ถึง 4.99) -> ได้ 200
         return "200฿";
-    } else if (rand < 20) {  
+    } else if (rand < 50) {  
         // โอกาส 15% (5 ถึง 19.99) -> ได้ 400
         // (คำนวณจาก: 5% เดิม + 15% ใหม่ = 20)
         return "400฿";
@@ -57,5 +57,6 @@ function openEnvelope(index) {
 function initGame() {
     hasSelected = false;
 }
+
 
 initGame();
