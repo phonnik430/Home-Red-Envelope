@@ -1,0 +1,81 @@
+:root {
+  --primary-red: #ff4d4d;
+  --gold: #fbc02d;
+  --bg-color: #fff5f5;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 { color: var(--primary-red); font-size: 24px; margin-bottom: 5px; }
+#sub-title { color: #888; font-size: 14px; margin-bottom: 30px; }
+
+.envelope-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.envelope {
+  width: 85px;
+  height: 130px;
+  background-color: var(--primary-red);
+  color: var(--gold);
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #d32f2f;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* แอนิเมชันกดลงเมื่อคลิก */
+.envelope:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #d32f2f;
+}
+
+/* รูปแบบหลังจากถูกจับ */
+.envelope.opened {
+  background-color: #fff;
+  color: var(--primary-red);
+  border: 3px solid var(--primary-red);
+  box-shadow: 0 4px 10px rgba(255, 77, 77, 0.2);
+  font-size: 18px;
+}
+
+/* ล็อกรางวัลอั่งเปาที่ไม่ได้สุ่มได้ */
+.envelope.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(0.5);
+}
+
+#status-msg {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
